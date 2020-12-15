@@ -85,9 +85,9 @@ public class Unit : MonoBehaviour
     private List<GridPos> resultPathList; // Путь до цели  
 
     [SerializeField]
-    public bool movingToNode;            // идет перемещение на соседний узел - просьба не беспокоить
+    private bool movingToNode;            // идет перемещение на соседний узел - просьба не беспокоить
     [SerializeField]
-    public bool attacking;               // дерусь - просьба не беспокоить
+    private bool attacking;               // дерусь - просьба не беспокоить
 
     private void Awake()
     {
@@ -122,10 +122,12 @@ public class Unit : MonoBehaviour
     {
         currentNode = Vector3ToGridPos(unitTransform.position);
         currentNodeVector = unitTransform.position;
+
         unitHP.SetStartHealth(StartingHealth);
 
         if (amINotZombie) targets = gameManager.zombies;
         else targets = gameManager.men;
+
         Targeting();
     }
 

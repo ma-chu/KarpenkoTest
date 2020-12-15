@@ -34,12 +34,12 @@ public class GameManager : MonoBehaviour
     private Material zombieMaterial;
 
 
-    private void OnEnable()                                 //загрузить параметры из конфигурационного файла
+    private void OnEnable()                                 
     {
         databaseLoader = GameObject.FindGameObjectWithTag("DatabaseLoader").GetComponent<DatabaseLoader>();
     }
     void Start()
-    {
+    {   //загрузить параметры из конфигурационного файла
         notWalkablePart = databaseLoader.configurableParams[0].notWalkablePart;
         width = databaseLoader.configurableParams[0].width;
         height = databaseLoader.configurableParams[0].height;
