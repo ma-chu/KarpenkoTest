@@ -149,12 +149,12 @@ public class GameManager : MonoBehaviour
         if (menLives == 0)
         {
             if (zombieLives == 0) Debug.Log("DRAW!"); else Debug.Log("Zombies WIN!");
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
-        if (zombieLives == 0)
+        if ((zombieLives == 0)&&(menLives != 0))
         {
             Debug.Log("men WIN!");
-            // Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
     }
 }

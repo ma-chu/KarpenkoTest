@@ -145,8 +145,8 @@ MonoBehaviour:
   damageBaseMax: 2.22
   attackRange: 1.46
   attackTime: 3
-  movementSpeed: 1.5
-  startingHealth: 7
+  movementSpeed: 7
+  startingHealth: 5
   bulletVelocity: 10
   amINotZombie: 1
   targets: []

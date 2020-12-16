@@ -156,10 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4787ae38ced8ee4ab86c022b2a127dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notWalkablePart: 0.16
+  notWalkablePart: 0
   width: 80
   height: 80
-  numberOfUnits: 4
+  numberOfUnits: 1
   notWalkableNodePrefab: {fileID: 5841487238795141940, guid: a4629874050fd9a49afe3bc669532362,
     type: 3}
   closeCombatUnitPrefab: {fileID: 3746555827868280102, guid: eb51261e418aca1459f897bc15235e83,

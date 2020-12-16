@@ -141,6 +141,7 @@ public class Unit : MonoBehaviour
         if (target == null) Targeting();
         else
         {
+            // Подпрограмма?
             targetPosition = targetTransform.position;
             toTargetVector = targetPosition - unitTransform.position;
         }
@@ -168,6 +169,12 @@ public class Unit : MonoBehaviour
                 {
                     target = item;
                     targetTransform = target.GetComponent<Transform>();
+                    
+                    // Подпрограмма?
+                    targetPosition = targetTransform.position;
+                    toTargetVector = targetPosition - unitTransform.position;
+
+
                 }
             }
         }
@@ -177,11 +184,19 @@ public class Unit : MonoBehaviour
             destination = Vector3ToGridPos(targetPosition);
 
             JumpPointParam jpParam = new JumpPointParam(gameManager.searchGrid, EndNodeUnWalkableTreatment.ALLOW, DiagonalMovement.OnlyWhenNoObstacles);
+
             jpParam.Reset(currentNode, destination);
             resultPathList = JumpPointFinder.FindPath(jpParam);
 
             if (resultPathList.Count > 1) nextNode = resultPathList[1];
             if (nextNode == null) return;
+
+            // Проверка, чтоб шаг был не более 1 узла
+            if ((nextNode.x - currentNode.x) > 1) nextNode.x = currentNode.x + 1;
+            if ((currentNode.x - nextNode.x) > 1) nextNode.x = currentNode.x - 1;
+            if ((nextNode.y - currentNode.y) > 1) nextNode.y = currentNode.y + 1;
+            if ((currentNode.y - nextNode.y) > 1) nextNode.y = currentNode.y - 1;
+            
             nextNodeVector = GridPosToVector3(nextNode);            
 
             if ((currentNode != nextNode) && gameManager.searchGrid.IsWalkableAt(nextNode))   

@@ -50,8 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageBaseMin: 1
   damageBaseMax: 1
-  attackRange: 15
-  attackTime: 3
+  attackRange: 10
+  attackTime: 4
   movementSpeed: 1
   startingHealth: 3
   bulletVelocity: 10
