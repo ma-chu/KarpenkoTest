@@ -91,13 +91,13 @@ public class GameManager : MonoBehaviour
 
     private void SpawnAllUnits()                            // Порождение юнитов: четные - лучники, нечетные - щитники
     {
+        bool distantOrClose;
+        GameObject closeOrDistantPrefab;
+        GameObject instance;
+        Unit unit;
+
         for (int i = 1; i <= numberOfUnits; i++)
         {
-            bool distantOrClose;
-            GameObject closeOrDistantPrefab;
-            GameObject instance;
-            Unit unit;
-
             distantOrClose = i % 2 == 0;
             closeOrDistantPrefab = distantOrClose ? distantCombatUnitPrefab : closeCombatUnitPrefab;
             // люди
@@ -149,12 +149,12 @@ public class GameManager : MonoBehaviour
         if (menLives == 0)
         {
             if (zombieLives == 0) Debug.Log("DRAW!"); else Debug.Log("Zombies WIN!");
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
         }
         if ((zombieLives == 0)&&(menLives != 0))
         {
             Debug.Log("men WIN!");
-            //Time.timeScale = 0;
+            Time.timeScale = 0;
         }
     }
 }

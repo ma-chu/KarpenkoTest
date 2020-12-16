@@ -1,20 +1,20 @@
 [
 	{
-		"notWalkablePart": "0.14",
+		"notWalkablePart": "0.12",
 		"width": "80",
 		"height": "80",
-		"numberOfUnits": "5",	
+		"numberOfUnits": "10",	
 		"closeCombatUnitDamageBaseMin": "1.45",
 		"closeCombatUnitDamageBaseMax": "2.2",
 		"closeCombatUnitAttackRange": "1.45",
-		"closeCombatUnitAttackTime": "3",
-		"closeCombatUnitMovementSpeed": "1",
+		"closeCombatUnitAttackTime": "2",
+		"closeCombatUnitMovementSpeed": "2",
 		"closeCombatUnitStartingHealth": "5",	
 		"distantCombatUnitDamageBaseMin": "1",
 		"distantCombatUnitDamageBaseMax": "1",
-		"distantCombatUnitAttackRange": "10",
-		"distantCombatUnitAttackTime": "4",
-		"distantCombatUnitMovementSpeed": "1",
+		"distantCombatUnitAttackRange": "13",
+		"distantCombatUnitAttackTime": "2.5",
+		"distantCombatUnitMovementSpeed": "2",
 		"distantCombatUnitStartingHealth": "3",
 		"bulletVelocity": "10"
 	}		
