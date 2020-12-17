@@ -152,6 +152,7 @@ public class Unit : MonoBehaviour
             if (unitAttack.Attack(target, toTargetVector))
             {
                 targets[System.Array.IndexOf(targets, target)] = null;
+                target.GetComponent<Unit>().enabled = false;                  // ждать смерти - не ходить, не атаковать
                 Destroy(target, toTargetVector.magnitude / bulletVelocity);
                 Retarget();
             }
